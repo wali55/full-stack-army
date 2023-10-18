@@ -39,10 +39,66 @@ Student:
     - Email
     - Phone No
     - Profile Picture/Avatar
-- Active users can see their logs(past activities)
+- Active users can see their timesheet(past activities)
     - Calender view
     - List view
     - Table view
 - Active users can participate in attendance system
 - User can logout
+*/
+
+/*
+Requirement Analysis:
+---------------------
+Models
+- User
+    - Name
+    - Email
+    - Password
+    - Roles
+    - AccountStatus
+
+- Profile
+    - First Name
+    - Last Name
+    - Phone No
+    - Profile Picture
+    - UserId
+
+- StudentAttendance
+    - UserId
+    - CreatedAt: DateTime
+
+- AdminAttedance
+    - CreatedAt: DateTime
+    - Status
+    - TimeLimit
+
+
+Endpoints:
+----------
+Student Endpoints:
+- POST /auth/login [public]
+- POST /auth/register [public]
+- PATCH /profiles [private]
+- PATCH /profiles/avatar [private]
+- PUT /auth/change-password [private]
+- GET /timesheet [private]
+- GET /attendance [private]
+
+Admin Endpoints:
+- GET /users [private]
+- POST /users [private]
+- PATCH /users/userId [private]
+- DELETE /users/userId [private]
+- GET /users/userId [private]
+- GET /profiles [private]
+- POST /profiles [private]
+- PATCH /profiles/profileId [private]
+- DELETE /profiles/profileId [private]
+- GET /profiles/profileId [private]
+- GET /timesheet/userId [private]
+- GET /timesheet/stats [private]
+- POST /attendance/enable [private]
+- GET /attendance/disabled/:attendanceId [private]
 */

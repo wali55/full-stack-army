@@ -68,6 +68,7 @@ Models
 - StudentAttendance
     - UserId
     - CreatedAt: DateTime
+    - AdminAttedanceId (added later)
 
 - AdminAttedance
     - CreatedAt: DateTime
@@ -85,6 +86,7 @@ Student Endpoints:
 - PUT /auth/change-password [private]
 - GET /timesheet [private]
 - GET /attendance [private]
+- GET /attendanceStatus [private] (added later)
 
 Admin Endpoints:
 - GET /users [private]
